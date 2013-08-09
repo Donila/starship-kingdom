@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using StarshipKingdom.Domain.Models.Ships;
 
 namespace StarshipKingdom.Domain.Models.MatchMaking
 {

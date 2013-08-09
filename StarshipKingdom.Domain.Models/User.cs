@@ -6,6 +6,10 @@ namespace StarshipKingdom.Domain.Models
     {
         public string Name { get; set; }
 
-        public virtual IEnumerable<Ship> Ships { get; set; }
+        public string Password { get; set; }
+
+        public string Email { get; set; }
+
+        public virtual IEnumerable<Ships.Ship> Ships { get; set; }
     }
 }

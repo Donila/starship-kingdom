@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace StarshipKingdom.Domain.Models
+namespace StarshipKingdom.Domain.Models.Ships
 {
     public class Ship
     {

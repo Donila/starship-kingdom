@@ -39,12 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BattleMechanic\GlobalMechanics.cs" />
+    <Compile Include="BattleMechanic\Move.cs" />
+    <Compile Include="BattleMechanic\Step.cs" />
     <Compile Include="MatchMaking\Duel.cs" />
     <Compile Include="MatchMaking\Match.cs" />
-    <Compile Include="Ship.cs" />
+    <Compile Include="Ships\Ship.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShipBodyPart.cs" />
-    <Compile Include="Stats.cs" />
+    <Compile Include="Ships\ShipBodyPart.cs" />
+    <Compile Include="Ships\Stats.cs" />
+    <Compile Include="Ships\Weaporn.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
