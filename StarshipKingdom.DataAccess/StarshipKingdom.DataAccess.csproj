@@ -66,8 +66,14 @@
       <Name>StarshipKingdom.Services</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Scripts\" />
+    <Content Include="Scripts\Matches.sql" />
+    <Content Include="Scripts\Moves.sql" />
+    <Content Include="Scripts\Ships.sql" />
+    <Content Include="Scripts\ShipsMatches.sql" />
+    <Content Include="Scripts\Steps.sql" />
+    <Content Include="Scripts\Users.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
