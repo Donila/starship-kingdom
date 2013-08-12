@@ -1,6 +1,6 @@
 ﻿namespace StarshipKingdom.Domain.Models.Ships
 {
-    public class ShipBodyPart
+    public class ShipBodyPart : BaseModel
     {
         public string Name { get; set; }
 

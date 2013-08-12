@@ -2,10 +2,8 @@
 
 namespace StarshipKingdom.Domain.Models.BattleMechanic
 {
-    public class Move
+    public class Move : BaseModel
     {
-        public int Id { get; set; }
-
         public int MoveNumber { get; set; }
 
         public int GivenDamage { get; set; }

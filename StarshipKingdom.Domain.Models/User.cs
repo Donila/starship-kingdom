@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using StarshipKingdom.Domain.Models.Ships;
 
 namespace StarshipKingdom.Domain.Models
 {
-    public class User
+    public class User : BaseModel
     {
         public string Name { get; set; }
 
@@ -10,6 +11,6 @@ namespace StarshipKingdom.Domain.Models
 
         public string Email { get; set; }
 
-        public virtual IEnumerable<Ships.Ship> Ships { get; set; }
+        public virtual IEnumerable<Ship> Ships { get; set; }
     }
 }

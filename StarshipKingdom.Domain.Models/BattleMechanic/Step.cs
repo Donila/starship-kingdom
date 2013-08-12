@@ -1,4 +1,6 @@
-﻿namespace StarshipKingdom.Domain.Models.BattleMechanic
+﻿using StarshipKingdom.Domain.Models.Ships;
+
+namespace StarshipKingdom.Domain.Models.BattleMechanic
 {
     public class Step
     {
@@ -8,6 +10,6 @@
 
         public virtual Move Move { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual Ship Ship { get; set; }
     }
 }

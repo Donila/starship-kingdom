@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseModel.cs" />
     <Compile Include="BattleMechanic\GlobalMechanics.cs" />
     <Compile Include="BattleMechanic\Move.cs" />
     <Compile Include="BattleMechanic\Step.cs" />
@@ -47,7 +48,6 @@
     <Compile Include="Ships\Ship.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ships\ShipBodyPart.cs" />
-    <Compile Include="Ships\Stats.cs" />
     <Compile Include="Ships\Weaporn.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
