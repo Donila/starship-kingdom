@@ -8,6 +8,7 @@
 
         public int Damage { get; set; }
 
+        public int OwnerId { get; set; }
         public virtual User Owner { get; set; }
     }
 }

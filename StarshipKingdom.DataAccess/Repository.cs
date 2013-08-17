@@ -1,8 +1,8 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using System.Linq;
 using StarshipKingdom.Domain.Models;
 using StarshipKingdom.Services;
-using Dapper;
 
 namespace StarshipKingdom.DataAccess
 {
@@ -17,24 +17,11 @@ namespace StarshipKingdom.DataAccess
         protected Repository(IApplicationSettingsReader reader)
         {
             _reader = reader;
-
-            ConnectionString = _reader.GetConnectionString();
-
-            TableName = string.Format("[dbo].[{0}s]", typeof (TModel).Name);
         }
 
         public TModel Get(int id)
         {
-            using (var connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-
-                var query = string.Format("select * from {0} where Id = @Id", TableName);
-
-                var result = connection.Query<TModel>(query, new { Id = id });
-
-                return result.FirstOrDefault();
-            }
+            throw new NotImplementedException();
         }
 
         public abstract int Insert(TModel model);
@@ -43,14 +30,7 @@ namespace StarshipKingdom.DataAccess
 
         public void Delete(TModel model)
         {
-            using (var connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-
-                var query = string.Format("delete from {0} where Id = @Id", TableName);
-
-                connection.Query<TModel>(query, new { Id = model });
-            }
+            throw new NotImplementedException();
         }
     }
 }

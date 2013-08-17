@@ -1,7 +1,10 @@
-﻿namespace StarshipKingdom.Domain.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace StarshipKingdom.Domain.Models
 {
     public abstract class BaseModel
     {
-        public long Id { get; set; }
+        [Key]
+        public int Id { get; set; }
     }
 }

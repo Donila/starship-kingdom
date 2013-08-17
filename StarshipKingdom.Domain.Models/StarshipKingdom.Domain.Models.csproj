@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,7 +44,6 @@
     <Compile Include="BattleMechanic\GlobalMechanics.cs" />
     <Compile Include="BattleMechanic\Move.cs" />
     <Compile Include="BattleMechanic\Step.cs" />
-    <Compile Include="MatchMaking\Duel.cs" />
     <Compile Include="MatchMaking\Match.cs" />
     <Compile Include="Ships\Ship.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

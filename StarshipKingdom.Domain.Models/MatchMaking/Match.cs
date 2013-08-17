@@ -11,10 +11,11 @@ namespace StarshipKingdom.Domain.Models.MatchMaking
 
         public DateTime EndTime { get; set; }
 
+        public int CreatorId { get; set; }
         public User Creator { get; set; }
 
-        public virtual IEnumerable<Ship> Participants { get; set; }
+        public virtual ICollection<Ship> Ships { get; set; }
 
-        public virtual IEnumerable<Move> Moves { get; set; }
+        public virtual ICollection<Move> Moves { get; set; }
     }
 }

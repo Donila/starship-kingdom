@@ -1,6 +1,4 @@
 ﻿using System.Data.SqlClient;
-using System.Linq;
-using Dapper;
 using StarshipKingdom.Domain.Models;
 using StarshipKingdom.Services;
 
@@ -18,17 +16,7 @@ namespace StarshipKingdom.DataAccess.Repositories
 
         public override int Insert(User model)
         {
-            using (var connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-
-                var result = connection.Query<int>(
-                    "insert into [dbo].[Users](Name, Email, Password) " +
-                    "values (@Name, @Email, @Password);" +
-                    " SELECT CAST(@@IDENTITY as int)", model).FirstOrDefault();
-
-                return result;
-            }
+            throw new System.NotImplementedException();
         }
 
         public override void Update(User model)
