@@ -18,6 +18,8 @@ namespace StarshipKingdom.Domain.Models.BattleMechanic
         public virtual Step DefenderStep { get; set; }
 
         public int MatchId { get; set; }
+
+        [ForeignKey("MatchId")]
         public virtual Match Match { get; set; }
     }
 }

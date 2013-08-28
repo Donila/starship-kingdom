@@ -1,4 +1,6 @@
-﻿namespace StarshipKingdom.Domain.Models.Ships
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace StarshipKingdom.Domain.Models.Ships
 {
     public class Weaporn : BaseModel
     {
@@ -9,6 +11,8 @@
         public int Damage { get; set; }
 
         public int OwnerId { get; set; }
+
+        [ForeignKey("OwnerId")]
         public virtual User Owner { get; set; }
     }
 }

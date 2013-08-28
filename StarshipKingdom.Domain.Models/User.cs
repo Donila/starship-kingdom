@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using StarshipKingdom.Domain.Models.Ships;
-
-namespace StarshipKingdom.Domain.Models
+﻿namespace StarshipKingdom.Domain.Models
 {
     public class User : BaseModel
     {
@@ -10,7 +7,5 @@ namespace StarshipKingdom.Domain.Models
         public string Password { get; set; }
 
         public string Email { get; set; }
-
-        public virtual IEnumerable<Ship> Ships { get; set; }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Linq;
-using StarshipKingdom.Domain.Models;
+﻿using StarshipKingdom.Domain.Models;
 using StarshipKingdom.Services;
 
 namespace StarshipKingdom.DataAccess
@@ -19,18 +16,12 @@ namespace StarshipKingdom.DataAccess
             _reader = reader;
         }
 
-        public TModel Get(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract TModel Get(int id);
 
         public abstract int Insert(TModel model);
 
         public abstract void Update(TModel model);
 
-        public void Delete(TModel model)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Delete(TModel model);
     }
 }

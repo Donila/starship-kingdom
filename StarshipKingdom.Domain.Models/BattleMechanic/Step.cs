@@ -1,4 +1,5 @@
-﻿using StarshipKingdom.Domain.Models.Ships;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using StarshipKingdom.Domain.Models.Ships;
 
 namespace StarshipKingdom.Domain.Models.BattleMechanic
 {
@@ -8,10 +9,14 @@ namespace StarshipKingdom.Domain.Models.BattleMechanic
 
         public byte HitCode { get; set; }
 
-        public int MoveId { get; set; }
+        public long MoveId { get; set; }
+
+        [ForeignKey("MoveId")]
         public virtual Move Move { get; set; }
 
         public int ShipId { get; set; }
+
+        [ForeignKey("ShipId")]
         public virtual Ship Ship { get; set; }
     }
 }

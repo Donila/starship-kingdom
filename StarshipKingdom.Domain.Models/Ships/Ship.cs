@@ -19,7 +19,5 @@ namespace StarshipKingdom.Domain.Models.Ships
         public int Mobility { get; set; }
 
         public int Accuracy { get; set; }
-
-        public virtual IEnumerable<ShipBodyPart> Body { get; set; }
     }
 }

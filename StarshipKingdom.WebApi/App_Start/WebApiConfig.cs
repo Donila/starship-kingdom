@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.OData.Builder;
+using StarshipKingdom.Domain.Models;
 
 namespace StarshipKingdom
 {
@@ -15,13 +17,14 @@ namespace StarshipKingdom
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            // Раскомментируйте следующую строку кода, чтобы включить поддержку запросов для действий с типом возвращаемого значения IQueryable или IQueryable<T>.
-            // Чтобы избежать обработки неожиданных или вредоносных запросов, используйте параметры проверки в QueryableAttribute, чтобы проверять входящие запросы.
-            // Дополнительные сведения см. по адресу http://go.microsoft.com/fwlink/?LinkId=279712.
-            //config.EnableQuerySupport();
+            config.EnableQuerySupport();
 
-            // Чтобы отключить трассировку в приложении, закомментируйте или удалите следующую строку кода
-            // Дополнительные сведения см. по адресу: http://www.asp.net/web-api
+            ODataModelBuilder modelBuilder = new ODataConventionModelBuilder();
+            modelBuilder.EntitySet<User>("Users");
+
+            Microsoft.Data.Edm.IEdmModel model = modelBuilder.GetEdmModel();
+            config.Routes.MapODataRoute("ODataRoute", "odata", model);
+
             config.EnableSystemDiagnosticsTracing();
         }
     }

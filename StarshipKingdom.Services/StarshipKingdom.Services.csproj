@@ -41,7 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationSettingsReader.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StarshipKingdom.Domain.Models\StarshipKingdom.Domain.Models.csproj">
+      <Project>{3D5D2B18-FCF0-42A8-AC51-8797A20476D6}</Project>
+      <Name>StarshipKingdom.Domain.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
